@@ -1,5 +1,13 @@
 <?php
 
+use App\Http\Controllers\BodegaController;
+use App\Http\Controllers\DispositivoController;
+use App\Http\Controllers\MarcaController;
+use App\Http\Controllers\ModeloController;
+use App\Models\Bodega;
+use App\Models\Marca;
+use App\Models\Modelo;
+use App\Models\Dispositivo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +22,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::prefix('bodega')->group(function () {
+    Route::get('listar', [BodegaController::class, 'listar']);
+});
+Route::prefix('marca')->group(function () {
+    Route::get('listar', [MarcaController::class, 'listar']);
+});
+Route::prefix('modelo')->group(function () {
+    Route::get('listar', [ModeloController::class, 'listar']);
+});
+Route::prefix('dispositivo')->group(function () {
+    Route::get('listar', [DispositivoController::class, 'listar']);
+    Route::post('agregar', [DispositivoController::class, 'agregar']);
 });

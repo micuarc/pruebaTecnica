@@ -15,10 +15,10 @@ class ModeloSeeder extends Seeder
     {
         $modelos = [
             ['idMarca' => 2, 'nombreModelo' => 'Don Gato'],
-            ['idMarca' => 2, 'nombreModelo' => 'Garfield'],
-            ['idMarca' => 2, 'nombreModelo' => 'Gato Felix'],
+            ['idMarca' => 3, 'nombreModelo' => 'Garfield'],
+            ['idMarca' => 3, 'nombreModelo' => 'Gato Felix'],
             ['idMarca' => 1, 'nombreModelo' => 'Don Graf'],
-            ['idMarca' => 1, 'nombreModelo' => 'Patan'],
+            ['idMarca' => 2, 'nombreModelo' => 'Patan'],
             ['idMarca' => 1, 'nombreModelo' => 'Lassie']
         ];
 
